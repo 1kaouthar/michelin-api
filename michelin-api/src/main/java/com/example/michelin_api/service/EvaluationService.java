@@ -59,7 +59,9 @@ public class EvaluationService {
         return evaluationRepository.searchByKeyword(keyword);
     }
 
-
+    /**
+     * Liste toutes les évaluations créées par l’utilisateur connecté
+     */
     public List<EvaluationEntity> findMine(String currentUserTechnicalId) {
         return evaluationRepository.findByAuthorTechnicalId(currentUserTechnicalId);
     }
